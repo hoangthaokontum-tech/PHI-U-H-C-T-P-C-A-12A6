@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phiếu Học Tập Tương Tác</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="main-header card">
+            <h2 class="top-title">PHIẾU HỌC TẬP <span id="m-subject">MÔN</span> - KHỐI <span id="m-grade"></span></h2>
+            <h1 id="m-title" class="lesson-title">TÊN BÀI</h1>
+            <p id="m-subtitle" class="subtitle">Học mà chơi • Tương tác • Tự kiểm tra • Tự động tính điểm</p>
+        </header>
+
+        <!-- Thông tin học sinh -->
+        <section class="card student-info-card">
+            <h3 class="card-title">👩‍🎓 THÔNG TIN HỌC SINH</h3>
+            <div class="form-group-row">
+                <div class="input-group">
+                    <label for="student-name">Họ và tên:</label>
+                    <input type="text" id="student-name" placeholder="Nhập họ tên...">
+                </div>
+                <div class="input-group">
+                    <label for="student-class">Lớp:</label>
+                    <input type="text" id="student-class" placeholder="Nhập lớp...">
+                </div>
+                <div class="input-group">
+                    <label for="student-date">Ngày làm bài:</label>
+                    <input type="date" id="student-date">
+                </div>
+            </div>
+        </section>
+
+        <!-- Mục tiêu bài học -->
+        <section class="card goals-card">
+            <h3 class="card-title">🎯 MỤC TIÊU BÀI HỌC</h3>
+            <ul id="goals-list" class="goals-list"></ul>
+        </section>
+
+        <!-- Vùng chứa các câu hỏi -->
+        <div id="quiz-container"></div>
+
+        <!-- Các nút chức năng -->
+        <div class="actions">
+            <button id="btn-submit" class="btn btn-primary">🚀 NỘP BÀI</button>
+            <button id="btn-reset" class="btn btn-secondary">↻ LÀM LẠI</button>
+        </div>
+
+        <!-- Kết quả -->
+        <div id="result-container" class="card result-card hidden">
+            <h3 class="card-title">🏆 KẾT QUẢ CỦA BẠN</h3>
+            <div id="result-content"></div>
+        </div>
+
+        <!-- Ghi nhớ -->
+        <section class="card remember-card">
+            <h3 class="card-title">🧠 GHI NHỚ CUỐI BÀI</h3>
+            <ul id="remember-list" class="remember-list"></ul>
+        </section>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">Chính xác! 🎉</div>
+
+    <script src="content.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
